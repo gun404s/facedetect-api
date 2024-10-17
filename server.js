@@ -55,8 +55,8 @@ const db = knex ({
 
 
 
-app.listen(3001, ()=>{
-    console.log('connecting');
+app.listen(process.env.PORT || 3001, ()=>{
+    console.log(`APP IS RUNNING ON PORT ${process.env.PORT}`);
    
 });
 
