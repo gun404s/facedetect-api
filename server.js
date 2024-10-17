@@ -24,6 +24,10 @@ const db = knex ({
     }
 })
 
+app.get('/',(req,res)=>{
+    res.send('its working');
+})
+
     app.post ('/register',(req,res)=>{
         Register(req,res,db,bcrypt);
     })
@@ -45,10 +49,9 @@ const db = knex ({
         Urls(req,res,db);
     })
 
-  app.get('/toptable',(req,res)=>{
-    Toptable(req,res,db);
-  });
-
+    app.post('/toptable', (req, res) => {
+        Toptable(req, res, db);
+      });
 
 
 
