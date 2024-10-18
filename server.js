@@ -17,10 +17,8 @@ app.use(cors());
 const db = knex ({
     client:'pg',
     connection : {
-        host : '127.0.0.1',
-        user : 'postgres',
-        password: '74100147',
-        database : '_faceDetect'
+        connectionString: process.env.DATABASE_URL, // Using environment variable
+        ssl: { rejectUnauthorized: false }
     }
 })
 
