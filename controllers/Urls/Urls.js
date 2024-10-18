@@ -9,7 +9,7 @@ export const Urls = (req, res, db) => {
       .returning('*')
       .insert({
         url: url,
-        submitdate: new Date(),
+        submitted: new Date(),
         user_id: id  // Inserting id into the user_id column
       })
       .then(response => {
