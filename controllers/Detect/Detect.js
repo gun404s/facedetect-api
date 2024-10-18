@@ -10,7 +10,7 @@ export const Detect = (req,res)=>{
 
 
     // Your PAT (Personal Access Token) can be found in the Account's Security section
-    const PAT = 'c5ee1bce9c524b09901a18432d1ce26e';
+    const PAT = process.env.PAT_KEY;
     // Specify the correct user_id/app_id pairings
     // Since you're making inferences outside your app's scope
     const USER_ID = 'clarifai';
